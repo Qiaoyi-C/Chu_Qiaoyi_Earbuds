@@ -1,11 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <title>EchoWave EarBuds</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/main.css" rel="stylesheet"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+  </head>
+  <body>
+    <model-viewer id="model" src="model/Earbud_Ivory.gltf" ar ar-modes="webxr scene-viewer quick-look" ios-src="model/Earbud_Ivory.usdz" camera-controls poster="images/poster.webp" shadow-intensity="1" environment-image="images/aircraft_workshop_01_1k.hdr" exposure="1.7" camera-orbit="52.34deg 88.29deg 874.8m" field-of-view="30deg">
+
+        <button class="Hotspot" slot="hotspot-2" data-position="773.2438396890352m 99.24733360492652m -339.925779603754m" data-normal="0.5617639713590075m -0.5155967006036523m -0.6469785798692135m" data-visibility-attribute="visible">
+            <div class="HotspotAnnotation">
+                <img src="images/noise.svg" alt="Active Noise Cancellation">
+                <h2>Active Noise Cancellation (ANC)</h2>
+                <p>Effectively blocks external noise, enhancing your listening experience, and is ideal for use in noisy environments.</p>
+               
+            </div>
+
+        </button>
+        
+        <button class="Hotspot" slot="hotspot-3" data-position="754.5489530451953m 112.02122958681878m -360.27407730883976m" data-normal="-0.500856998305362m 0.21079924489774982m -0.8394676560768027m" data-visibility-attribute="visible">
+            <div class="HotspotAnnotation">
+                <img src="images/ear.svg" alt="Comfortable Design for ear">
+                <h2>Comfortable Design</h2>
+                <p>Features an ergonomic design, lightweight materials, and offers multiple ear tip sizes to ensure long-lasting comfort without ear pressure.</p>
+                
+                </div>
+
+        </button>
+        
+        <button class="Hotspot" slot="hotspot-4" data-position="678.1074171423458m 156.0372237726593m -270.15292514956485m" data-normal="-0.7509621567394889m 0.09746395563721125m 0.6531130196962263m" data-visibility-attribute="visible">
+            <div class="HotspotAnnotation">
+                <img src="images/battery.svg" alt="Long Battery Life">
+                <h2>Long Battery Life</h2>
+                <p>Enjoy up to 12 hours of playback on a single charge, with up to 36 hours total when using the charging case.</p>
+                
+            </div>
+        </button>
+      
+     
+      <button slot="ar-button" id="ar-button">
+          View in your space
+      </button>
+     
+    </model-viewer>  
+  <!-- Loads <model-viewer> for browsers: -->
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
 </html>
