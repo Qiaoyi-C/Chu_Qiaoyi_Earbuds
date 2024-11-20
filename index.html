@@ -5,12 +5,37 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="css/main.css" rel="stylesheet"/>
+    <link href="css/grid.css" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
   </head>
   <body>
-    <div class="header">
-        <h1>EchoWave EarBuds</h1>
-    </div>
+    <!-- Header -->
+    <header id="header-long" class="grid-con">       
+      <div id="logo" class="box col-start-1 col-end-2 m-col-span-full l-col-start-1 l-col-end-2">
+          <img src="images/logo.svg" alt="logo">
+      </div>
+      <div id="menu" class="box col-start-2 col-end-5 m-col-span-full l-col-start-2 l-col-end-5" onclick="toggleMenu()">
+          <img src="images/menu.svg" alt="hamburger menu icon">
+      </div>
+      <nav id="sidebar-menu" class="grid-con m-col-start-7 m-col-end-13 l-col-start-7 l-col-end-13">
+          <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="...">Color</a></li>
+              <li><a href="...">Tech Speces</a></li>
+          </ul>
+      </nav>
+
+      <nav id="topbar-menu" >
+          <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="...">Color</a></li>
+              <li><a href="...">Tech Speces</a></li>
+          </ul>
+      </nav>
+
+  </header>
+
+
     <model-viewer id="model" src="model/Earbud_Ivory.gltf" ar ar-modes="webxr scene-viewer quick-look" ios-src="model/Earbud_Ivory.usdz" camera-controls poster="images/poster.webp" shadow-intensity="1" environment-image="images/aircraft_workshop_01_1k.hdr" exposure="1.7" camera-orbit="52.34deg 88.29deg 874.8m" field-of-view="30deg">
 
         <button class="Hotspot" slot="hotspot-2" data-position="773.2438396890352m 99.24733360492652m -339.925779603754m" data-normal="0.5617639713590075m -0.5155967006036523m -0.6469785798692135m" data-visibility-attribute="visible">
@@ -47,7 +72,19 @@
           View in your space
       </button>
      
-    </model-viewer>  
+    </model-viewer> 
+    
+     <!-- Footer -->
+     <footer id="footer" class="grid-con">
+      <div id="footer-logo" class="box col-span-full m-col-span-full l-col-span-full">
+          <img src="images/logo.svg" alt="logo">
+      </div>
+  
+      <div id="footer-copyright" class="box col-span-full">
+          <p>&copy; 2024 Joy Chu. All Rights Reserved.</p>
+      </div>
+  </footer>
+  
   <!-- Loads <model-viewer> for browsers: -->
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"></script>
     <script src="js/main.js"></script>

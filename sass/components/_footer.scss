@@ -1,0 +1,22 @@
+@use '../abstracts' as a;
+
+#footer {
+    background-color: #232323;
+    text-align: center;
+}
+
+#footer-logo {
+    text-align: center;
+}
+
+#footer-logo img {
+    width: 20%;
+}
+
+#footer-copyright {
+    text-align: center;
+    font-size: 14px;
+    color: #888;
+    margin-top: 10px;
+    width: 100%;
+}

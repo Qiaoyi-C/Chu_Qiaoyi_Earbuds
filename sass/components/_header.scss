@@ -1,0 +1,151 @@
+@use '../abstracts' as a;
+
+#header-long{
+    background: #232323;
+  }
+
+#menu{
+    text-align: left;
+ }
+ 
+ #menu img{
+    width:40px;
+    
+ }
+    
+ #logo img {
+    width:130px;
+     
+ }
+ 
+ #sidebar-menu {
+    position: fixed;
+    top: 0;
+    right: -250px; 
+    width: 250px;
+    height: 100vh;
+    background-color: #232323;
+    transition: right 0.3s ease; 
+ }
+ 
+ #sidebar-menu.active {
+    left: 0; 
+ }
+ 
+ #sidebar-menu li{
+    list-style: none;
+    padding: 24px;
+    
+ }
+ 
+ #sidebar-menu li a{
+     text-decoration: none;
+     color: #ffffff;
+     font-weight: bold;
+     padding: 16px 64px 16px 64px;
+     
+ 
+    }
+ 
+ #sidebar-menu li a:hover{
+       background-color: #ffffff;
+       color: #803901;
+       border-radius: 30px;
+    }
+ 
+ #topbar-menu {
+    display: none;
+ }   
+
+ @media screen and (min-width: 768px) { 
+    #menu {
+        display: none;
+    }
+
+    #header-long {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+   
+    #topbar-menu {
+     display: flex;
+     padding: 16px;
+    }
+   
+    #topbar-menu ul {
+     list-style-type: none;
+     margin: 0;
+     padding: 0;
+     display: flex;
+     justify-content: flex-end;
+   }
+   
+    #topbar-menu li{
+     list-style: none;
+     
+   }
+   
+   #topbar-menu li a{
+     font-size: 18px;
+      text-decoration: none;
+      color: #ffffff;
+      font-weight: bold;
+      padding: 16px 32px 16px 32px;
+    
+     }
+   
+   #topbar-menu li a:hover{
+        background-color: white;
+        color: #803901;
+        border-radius: 30px;
+     }
+
+ }
+
+ @media screen and (min-width: 1200px) { 
+
+    #menu {
+        display: none;
+    }
+
+    #header-long {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+   
+    #topbar-menu {
+     display: flex;
+     padding: 16px;
+    }
+   
+    #topbar-menu ul {
+     list-style-type: none;
+     margin: 0;
+     padding: 0;
+     display: flex;
+     justify-content: flex-end;
+   }
+   
+    #topbar-menu li{
+     list-style: none;
+     
+   }
+   
+   #topbar-menu li a{
+     font-size: 18px;
+      text-decoration: none;
+      color: #ffffff;
+      font-weight: bold;
+      padding: 16px 32px 16px 32px;
+    
+     }
+   
+   #topbar-menu li a:hover{
+        background-color: #ffffff;
+        color: #803901;
+        border-radius: 30px;
+     }
+
+ }
