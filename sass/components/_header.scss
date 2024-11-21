@@ -1,27 +1,26 @@
 @use '../abstracts' as a;
 
-/* Header 背景 */
 #full-header {
-   position: fixed;      /* 固定位置 */
-   top: 0;               /* 距離頁面頂部 0px */
-   left: 0;              /* 距離左邊 0px */
-   width: 100%;          /* 寬度為 100%，與視窗寬度相同 */
-   z-index: 1000;        /* 確保 header 顯示在最上層 */
-   background: #232323;  /* 背景顏色 */
+   position: fixed;      
+   top: 0;               
+   left: 0;              
+   width: 100%;         
+   z-index: 1000;        
+   background: #232323;  
  }
 
  body {
-   margin-top: 100px;      /* 確保 header 固定後，其他內容不會被擋住 */
+   margin-top: 100px;     
  }
 
-/* Menu Icon (手機版) */
+/* Menu Icon  */
 #menu {
   text-align: right;
 }
 
 #menu img {
   width: 40px;
-  transition: transform 0.3s ease; /* 添加旋轉動畫 */
+  transition: transform 0.3s ease; 
 }
 
 /* Logo */
@@ -29,19 +28,19 @@
   width: 130px;
 }
 
-/* Sidebar Menu (手機版) */
+/* Sidebar Menu  */
 #sidebar-menu {
   position: fixed;
   top: 0;
-  right: -250px; /* 初始位置在螢幕外 */
+  right: -250px; 
   width: 250px;
   height: 100vh;
   background-color: #232323;
-  transition: right 0.3s ease; /* 平滑滑動動畫 */
+  transition: right 0.3s ease; 
 }
 
 #sidebar-menu.active {
-  right: 0; /* Sidebar 滑入 */
+  right: 0; 
 }
 
 #sidebar-menu li {
@@ -56,7 +55,7 @@
   font-weight: bold;
   padding: 8px 64px;
   
-  display: block; /* 確保點擊範圍是整行 */
+  display: block; 
 }
 
 #sidebar-menu li a:hover {
@@ -65,14 +64,14 @@
   border-radius: 20px;
 }
 
-/* Topbar Menu (桌面版) */
+/* Topbar Menu  */
 #topbar-menu {
-  display: none; /* 預設隱藏 (僅桌面顯示) */
+  display: none; 
 }
 
 @media screen and (min-width: 768px) {
   #menu {
-    display: none; /* 隱藏手機版 Menu Icon */
+    display: none; 
   }
 
   #header-long {
@@ -114,5 +113,5 @@
 }
 
 @media screen and (min-width: 1200px) {
-  /* 保持與 768px 的設計一致 */
+
 }
