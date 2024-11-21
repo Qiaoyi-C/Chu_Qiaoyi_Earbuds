@@ -14,7 +14,13 @@
     font-weight: bold;
     margin-top: 40px;
     margin-bottom: 40px;
-}  
+}
+
+.image-box{
+    opacity: 0; /* 初始透明度設為 0 */
+    transform: translateX(0); /* 初始位置 */
+    transition: opacity 0.3s ease, transform 0.5s ease;
+}
   
   /* 左側圖片 */
   .image-box img {
@@ -33,11 +39,15 @@
     background-color: #fff7ef; /* 柔和的背景色 */
     border-radius: 24px; /* 圓角框 */
     aspect-ratio: 1; /* 保持正方形 */
+    opacity: 0; /* 初始透明度設為 0 */
+    transform: translateX(0); /* 初始位置 */
+    transition: opacity 0.3s ease, transform 0.5s ease;
   }
   
   /* 文字內容 */
   .text-content {
     text-align: left;
+
   }
   
   /* 時間區塊 */

@@ -21,6 +21,9 @@
     padding: 20px;                 /* 卡片內間距 */
     text-align: center;            /* 卡片文字居中 */
     flex: 1;                       /* 卡片等寬 */
+    opacity: 0; /* 初始為不可見 */
+    transform: translateY(-50px); /* 從左邊偏移 */
+    transition: all 0.5s ease; /* 過渡動畫 */
   }
   
   /* 圖示區域樣式 */

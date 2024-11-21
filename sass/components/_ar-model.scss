@@ -11,6 +11,24 @@ model-viewer{
   border: 0;
   width: 45px;
   height: 38px;
+  animation: pulse 1.5s infinite; /* 添加動畫效果 */
+ 
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    50% {
+      transform: scale(1.2);
+      opacity: 0.8;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
 }
 
 .Hotspot:not([data-visible]) {
