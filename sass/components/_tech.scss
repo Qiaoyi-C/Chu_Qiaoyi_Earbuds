@@ -1,0 +1,92 @@
+/* Tech Specs Section */
+.tech-specs {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 20px;
+    align-items: center;
+    padding-bottom: 60px;
+  }
+
+.title-tech{
+    color: #803901;
+    text-align: center;
+    font-size: 36px;
+    font-weight: bold;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}  
+  
+  /* 左側圖片 */
+  .image-box img {
+    display: block;
+    width: 100%; /* 確保圖片響應式 */
+    height: auto;
+    border-radius: 24px; /* 可選：讓圖片有圓角 */
+  }
+  
+ /* 文字框樣式 */
+.text-box {
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff7ef; /* 柔和的背景色 */
+    border-radius: 24px; /* 圓角框 */
+    aspect-ratio: 1; /* 保持正方形 */
+  }
+  
+  /* 文字內容 */
+  .text-content {
+    text-align: left;
+  }
+  
+  /* 時間區塊 */
+  .time {
+    margin-bottom: 20px; /* 時間塊之間的間距 */
+  }
+  
+  .time:last-child {
+    margin-bottom: 0;
+  }
+  
+  /* 時間數值 */
+  .time-value {
+    font-size: 48px; /* 大字體 */
+    font-weight: 700; /* 粗體 */
+    color: #8c4413; /* 深棕色 */
+  }
+  
+  /* 單位 */
+  .time-unit {
+    font-size: 16px; /* 較小字體 */
+    font-weight: 400; /* 普通字體 */
+    color: #8c4413;
+  }
+  
+  /* 描述文字 */
+  .time p {
+    font-size: 20px; /* 正文字體大小 */
+    font-weight: 400;
+    color: #333; /* 深灰色 */
+    margin: 5px 0 0 0; /* 上方間距 */
+    line-height: 1.5; /* 行高 */
+  }
+  
+
+  @media (max-width: 768px) {
+  .tech-specs {
+    grid-template-columns: 1fr; /* 單欄排列 */
+    gap: 20px;
+  }
+
+  .image-box,
+  .text-box {
+    grid-column: span 12;
+  }
+
+  .text-box {
+    height: auto; /* 移除固定比例，允許文字撐高 */
+  }
+}
+
+  

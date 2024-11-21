@@ -1,0 +1,79 @@
+#outerShell {
+    display: flex;
+    justify-content: center; /* 水平置中 */
+    align-items: center;    /* 垂直置中 */
+    width: 100%;
+    margin: auto;
+    border-radius: 16px;
+    margin-bottom: 60px;
+}
+
+#mobile-tablet-view {
+    width: 100%; /* 確保圖片在小螢幕時填滿寬度 */
+    display: none; /* 預設隱藏，針對小螢幕啟用 */
+}
+
+@media (max-width: 768px) {
+    #mobile-tablet-view {
+        display: block; /* 顯示靜態替代圖片 */
+        text-align: center; /* 圖片居中對齊 */
+    }
+
+    #mobile-tablet-view img {
+        width: 100%; /* 圖片寬度填滿容器 */
+        height: auto; /* 高度等比例縮放 */
+        margin-bottom: 16px; /* 圖片間距 */
+        border-radius: 24px;
+    }
+
+    #outerShell {
+        display: none; /* 隱藏互動區域（如拖動功能） */
+    }
+}
+
+@media screen and (min-width: 768px) {
+    #mobile-tablet-view {
+        display: none; /* 桌面尺寸隱藏靜態圖片 */
+    }
+
+    #outerShell {
+        display: block;
+        max-width: 100%;
+    }
+    
+    #imageCon {
+        position: relative;
+        max-width: 100%;
+        height: 100vh;
+    }
+    
+    .slideImage {
+        position: absolute;
+        left: 0;
+        right: 0;
+        height: 100vh;
+        border-radius: 30px;
+    }
+    
+    .image-right {
+        background: url(../images/Xray.jpg) no-repeat;
+        background-size: cover;
+        background-position: center center;
+        background-attachment: fixed;
+    }
+    
+    .image-left {
+        background: url(../images/Earbud_light.jpg) no-repeat;
+        background-size: cover;
+        background-position: center center;
+        width: 50%;
+        background-attachment: fixed;
+    }
+    
+    .image-drag {
+        background-color: #7a3703;
+        left: 50%;
+        width: 12px;
+        cursor: pointer;
+    }
+}
