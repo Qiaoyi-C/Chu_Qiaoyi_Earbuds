@@ -175,6 +175,84 @@ menuIcon.addEventListener("click", () => {
   menuImage.classList.toggle("rotate");
 });
 
+//Card
+// 初始化 ScrollTrigger
+gsap.registerPlugin(ScrollTrigger);
+
+// 選取所有卡片
+const cards = document.querySelectorAll('.feature-card');
+
+// 設置動畫
+cards.forEach((card, index) => {
+  gsap.fromTo(
+    card,
+    { opacity: 0, y: -50 }, // 起始狀態：透明且向上偏移
+    { 
+      opacity: 1, 
+      y: 0, // 結束狀態：完全顯示並歸位
+      duration: 0.8, // 每個動畫的持續時間
+      delay: index * 0.2, // 每張卡片依次延遲
+      ease: "power3.out", // 平滑的動畫效果
+      scrollTrigger: {
+        trigger: card, // 每張卡片作為觸發點
+        start: "top 80%", // 滾動到卡片進入視口 80% 時觸發
+        end: "top 30%", // 滾動到視口 30% 時結束
+        toggleActions: "play none none none" // 當觸發時播放動畫
+      }
+    }
+  );
+});
+
+
+const hotspots = document.querySelectorAll('.hotspot');
+hotspots.forEach(hotspot => {
+  hotspot.addEventListener('click', () => {
+    hotspot.classList.add('active');
+    setTimeout(() => {
+      hotspot.classList.remove('active');
+    },); // 0.5 秒後移除動畫
+  });
+});
+
+// 確保 GSAP 和 ScrollTrigger 已加載
+gsap.registerPlugin(ScrollTrigger);
+
+const leftCard = document.querySelector('.image-box');
+const rightCard = document.querySelector('.text-box');
+
+// 左邊卡片從左滑入
+gsap.fromTo(
+  leftCard,
+  { x: -100, opacity: 0 }, // 起始狀態：向左偏移 100px，透明
+  {
+    x: 0, // 回到原位
+    opacity: 1, // 顯示
+    duration: 1, // 持續時間
+    ease: "power2.out", // 平滑效果
+    scrollTrigger: {
+      trigger: leftCard, // 觸發點
+      start: "top 80%", // 當左邊卡片進入視口時觸發
+    },
+  }
+);
+
+// 右邊卡片從右滑入
+gsap.fromTo(
+  rightCard,
+  { x: 100, opacity: 0 }, // 起始狀態：向右偏移 100px，透明
+  {
+    x: 0, // 回到原位
+    opacity: 1, // 顯示
+    duration: 1, // 持續時間
+    ease: "power2.out", // 平滑效果
+    delay: 0.7, // 延遲 
+    scrollTrigger: {
+      trigger: rightCard, // 觸發點
+      start: "top 80%", // 當右邊卡片進入視口時觸發
+    },
+  }
+);
+
 
 
 
