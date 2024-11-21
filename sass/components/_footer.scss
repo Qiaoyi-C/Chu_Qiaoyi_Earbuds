@@ -1,7 +1,10 @@
 @use '../abstracts' as a;
 
-#footer {
+.full-footer{
     background-color: #232323;
+}
+
+#footer {
     text-align: center;
 }
 

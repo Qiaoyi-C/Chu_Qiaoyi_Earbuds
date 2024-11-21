@@ -1,151 +1,118 @@
 @use '../abstracts' as a;
 
-#header-long{
-    background: #232323;
+/* Header 背景 */
+#full-header {
+   position: fixed;      /* 固定位置 */
+   top: 0;               /* 距離頁面頂部 0px */
+   left: 0;              /* 距離左邊 0px */
+   width: 100%;          /* 寬度為 100%，與視窗寬度相同 */
+   z-index: 1000;        /* 確保 header 顯示在最上層 */
+   background: #232323;  /* 背景顏色 */
+ }
+
+ body {
+   margin-top: 100px;      /* 確保 header 固定後，其他內容不會被擋住 */
+ }
+
+/* Menu Icon (手機版) */
+#menu {
+  text-align: right;
+}
+
+#menu img {
+  width: 40px;
+  transition: transform 0.3s ease; /* 添加旋轉動畫 */
+}
+
+/* Logo */
+#logo img {
+  width: 130px;
+}
+
+/* Sidebar Menu (手機版) */
+#sidebar-menu {
+  position: fixed;
+  top: 0;
+  right: -250px; /* 初始位置在螢幕外 */
+  width: 250px;
+  height: 100vh;
+  background-color: #232323;
+  transition: right 0.3s ease; /* 平滑滑動動畫 */
+}
+
+#sidebar-menu.active {
+  right: 0; /* Sidebar 滑入 */
+}
+
+#sidebar-menu li {
+  list-style: none;
+  text-align: left;
+  padding: 24px;
+}
+
+#sidebar-menu li a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: bold;
+  padding: 8px 64px;
+  
+  display: block; /* 確保點擊範圍是整行 */
+}
+
+#sidebar-menu li a:hover {
+  background-color: #ffffff;
+  color: #803901;
+  border-radius: 20px;
+}
+
+/* Topbar Menu (桌面版) */
+#topbar-menu {
+  display: none; /* 預設隱藏 (僅桌面顯示) */
+}
+
+@media screen and (min-width: 768px) {
+  #menu {
+    display: none; /* 隱藏手機版 Menu Icon */
   }
 
-#menu{
-    text-align: left;
- }
- 
- #menu img{
-    width:40px;
-    
- }
-    
- #logo img {
-    width:130px;
-     
- }
- 
- #sidebar-menu {
-    position: fixed;
-    top: 0;
-    right: -250px; 
-    width: 250px;
-    height: 100vh;
-    background-color: #232323;
-    transition: right 0.3s ease; 
- }
- 
- #sidebar-menu.active {
-    left: 0; 
- }
- 
- #sidebar-menu li{
+  #header-long {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  #topbar-menu {
+    display: flex;
+    padding: 16px;
+  }
+
+  #topbar-menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  #topbar-menu li {
     list-style: none;
-    padding: 24px;
-    
- }
- 
- #sidebar-menu li a{
-     text-decoration: none;
-     color: #ffffff;
-     font-weight: bold;
-     padding: 16px 64px 16px 64px;
-     
- 
-    }
- 
- #sidebar-menu li a:hover{
-       background-color: #ffffff;
-       color: #803901;
-       border-radius: 30px;
-    }
- 
- #topbar-menu {
-    display: none;
- }   
+  }
 
- @media screen and (min-width: 768px) { 
-    #menu {
-        display: none;
-    }
+  #topbar-menu li a {
+    font-size: 18px;
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 8px 32px;
+  }
 
-    #header-long {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-      }
-   
-    #topbar-menu {
-     display: flex;
-     padding: 16px;
-    }
-   
-    #topbar-menu ul {
-     list-style-type: none;
-     margin: 0;
-     padding: 0;
-     display: flex;
-     justify-content: flex-end;
-   }
-   
-    #topbar-menu li{
-     list-style: none;
-     
-   }
-   
-   #topbar-menu li a{
-     font-size: 18px;
-      text-decoration: none;
-      color: #ffffff;
-      font-weight: bold;
-      padding: 16px 32px 16px 32px;
-    
-     }
-   
-   #topbar-menu li a:hover{
-        background-color: white;
-        color: #803901;
-        border-radius: 30px;
-     }
+  #topbar-menu li a:hover {
+    background-color: white;
+    color: #803901;
+    border-radius: 20px;
+  }
+}
 
- }
-
- @media screen and (min-width: 1200px) { 
-
-    #menu {
-        display: none;
-    }
-
-    #header-long {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-      }
-   
-    #topbar-menu {
-     display: flex;
-     padding: 16px;
-    }
-   
-    #topbar-menu ul {
-     list-style-type: none;
-     margin: 0;
-     padding: 0;
-     display: flex;
-     justify-content: flex-end;
-   }
-   
-    #topbar-menu li{
-     list-style: none;
-     
-   }
-   
-   #topbar-menu li a{
-     font-size: 18px;
-      text-decoration: none;
-      color: #ffffff;
-      font-weight: bold;
-      padding: 16px 32px 16px 32px;
-    
-     }
-   
-   #topbar-menu li a:hover{
-        background-color: #ffffff;
-        color: #803901;
-        border-radius: 30px;
-     }
-
- }
+@media screen and (min-width: 1200px) {
+  /* 保持與 768px 的設計一致 */
+}

@@ -10,32 +10,134 @@
   </head>
   <body>
     <!-- Header -->
-    <header id="header-long" class="grid-con">       
+    <header id="full-header">
+    <section id="header-long" class="grid-con">       
       <div id="logo" class="box col-start-1 col-end-2 m-col-span-full l-col-start-1 l-col-end-2">
           <img src="images/logo.svg" alt="logo">
       </div>
-      <div id="menu" class="box col-start-2 col-end-5 m-col-span-full l-col-start-2 l-col-end-5" onclick="toggleMenu()">
+      <div id="menu" class="box col-start-2 col-end-5 m-col-span-full l-col-start-2 l-col-end-5">
           <img src="images/menu.svg" alt="hamburger menu icon">
       </div>
-      <nav id="sidebar-menu" class="grid-con m-col-start-7 m-col-end-13 l-col-start-7 l-col-end-13">
+      <nav id="sidebar-menu" class="grid-con col-start-3 col-end-5 m-col-start-8 m-col-end-13">
           <ul>
               <li><a href="index.html">Home</a></li>
-              <li><a href="...">Color</a></li>
-              <li><a href="...">Tech Speces</a></li>
+              <li><a href="#color-part">Color</a></li>
+              <li><a href="#tech-part">Tech Speces</a></li>
           </ul>
       </nav>
 
       <nav id="topbar-menu" >
           <ul>
               <li><a href="index.html">Home</a></li>
-              <li><a href="...">Color</a></li>
-              <li><a href="...">Tech Speces</a></li>
+              <li><a href="#color-part">Color</a></li>
+              <li><a href="#tech-part">Tech Speces</a></li>
           </ul>
       </nav>
-
+    </section>
   </header>
 
+  <!-- Hero Animation -->
+  <div class="animation">
+    <section class="grid-con" id="hero-con">
+        <h2 class="hidden">Hero image</h2>
+        <div class="col-span-full">
+        <canvas id="hero-anima"></canvas>
+        </div>
+    </section>
+    </div>
 
+    <!-- Color Change Buttons -->
+    <div class="color-area" id="color-part">
+        <section class="grid-con" id="color-con">
+            <h2 class="title-earbud col-span-full">Color</h2>
+            <div class="col-span-full">
+            <img id="hero-earbud-img" src="images/earbud_ivory.jpg" alt="Ivory Earbuds">
+            </div>
+            <div id="color-buttons" class="color-buttons col-span-full">
+            <button class="color-btn" data-color="Ivory" onclick="changeEarbudColor('Ivory')"></button>
+            <button class="color-btn" data-color="Black" onclick="changeEarbudColor('Black')"></button>
+            </div>
+        </section>
+    </div>
+
+    <!-- Tech Specs -->
+    <section class="grid-con tech-specs" id="tech-part">
+    <h2 class="col-span-full title-tech">Tech Specs</h2>
+    
+    <!-- 左側圖片 -->
+    <div class="image-box col-span-full m-col-start-1 m-col-end-7 l-col-start-1 l-col-end-7">
+      <img src="images/ promotional 3.jpg" alt="Product promotional image">
+    </div>
+    
+    <!-- 右側文字框 -->
+    <div class="text-box col-span-full m-col-start-7 m-col-end-12 l-col-start-7 l-col-end-12">
+    <div class="text-content">
+      <div class="time">
+        <span class="time-value">12</span><span class="time-unit"> hrs</span>
+        <p>playback on a single charge</p>
+      </div>
+      <div class="time">
+        <span class="time-value">36</span><span class="time-unit"> hrs</span>
+        <p>when using the charging case</p>
+      </div>
+    </div>
+  </div>
+  
+  </section>
+  
+  <!-- X-Ray -->
+  <div class="grid-con">
+    <section id="xray" class="col-span-full">
+      <div class="col-span-full" id="mobile-tablet-view">
+        <img src="images/Xray.jpg" alt="x-ray version" />
+        <img src="images/Earbud_light.jpg" alt="textured version image" />
+      </div>
+
+      <h2 class="hidden">X-Ray revealer</h2>
+      <div id="outerShell">
+        <div id="imageCon">
+          <!-- xray version -->
+          <div class="slideImage col-span-full image-right"></div>
+          <!-- rendered version -->
+          <div class="slideImage col-span-full image-left"></div>
+          <!-- drag bar -->
+          <div class="slideImage image-drag"></div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Info -->
+  <div class="info">
+  <section class="grid-con features-section">
+    <div class="feature-card col-span-full m-col-start-1 m-col-end-5 l-col-start-1 l-col-end-5">
+      <div class="icon-wrapper">
+        <img src="images/water.svg" alt="Water Resistance Icon">
+      </div>
+      <h3>Water Resistance Rating</h3>
+      <p>With an IPX4 water resistance rating, these earbuds are designed to withstand sweat, rain, and moisture, making them the perfect companion for workouts, outdoor activities, or even unexpected weather conditions. Enjoy your music without worry, no matter the environment.</p>
+    </div>
+  
+    <div class="feature-card col-span-full m-col-start-5 m-col-end-9 l-col-start-5 l-col-end-9">
+      <div class="icon-wrapper">
+        <img src="images/sound.svg" alt="Sound Quality Icon">
+      </div>
+      <h3>Sound Quality</h3>
+      <p>Emphasize the high-definition sound quality, such as clear highs, deep bass, and rich mids, allowing users to immerse themselves in the details of the music. If there is any special audio technology or tuning support, it can be highlighted.</p>
+    </div>
+  
+    <div class="feature-card col-span-full m-col-start-9 m-col-end-13 l-col-start-9 l-col-end-13">
+      <div class="icon-wrapper">
+        <img src="images/bluetooth.svg" alt="Bluetooth Icon">
+      </div>
+      <h3>Bluetooth Stability</h3>
+      <p>Equipped with the latest Bluetooth 5.2 technology, these earbuds ensure a stable, seamless connection with minimal interference. Experience ultra-low latency for gaming or video watching, allowing you to enjoy crisp, synchronized audio without any delays.</p>
+    </div>
+  </section>
+    </div>
+  
+
+    <!-- Earbuds hotspot -->
     <model-viewer id="model" src="model/Earbud_Ivory.gltf" ar ar-modes="webxr scene-viewer quick-look" ios-src="model/Earbud_Ivory.usdz" camera-controls poster="images/poster.webp" shadow-intensity="1" environment-image="images/aircraft_workshop_01_1k.hdr" exposure="1.7" camera-orbit="52.34deg 88.29deg 874.8m" field-of-view="30deg">
 
         <button class="Hotspot" slot="hotspot-2" data-position="773.2438396890352m 99.24733360492652m -339.925779603754m" data-normal="0.5617639713590075m -0.5155967006036523m -0.6469785798692135m" data-visibility-attribute="visible">
@@ -75,17 +177,21 @@
     </model-viewer> 
     
      <!-- Footer -->
-     <footer id="footer" class="grid-con">
-      <div id="footer-logo" class="box col-span-full m-col-span-full l-col-span-full">
-          <img src="images/logo.svg" alt="logo">
-      </div>
-  
-      <div id="footer-copyright" class="box col-span-full">
-          <p>&copy; 2024 Joy Chu. All Rights Reserved.</p>
-      </div>
-  </footer>
+     <div class="full-footer">
+        <footer id="footer" class="grid-con">
+        <div id="footer-logo" class="box col-span-full m-col-span-full l-col-span-full">
+            <img src="images/logo.svg" alt="logo">
+        </div>
+    
+        <div id="footer-copyright" class="box col-span-full">
+            <p>&copy; 2024 Joy Chu. All Rights Reserved.</p>
+        </div>
+        </footer>
+    </div>
   
   <!-- Loads <model-viewer> for browsers: -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.0/ScrollTrigger.js"></script>
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"></script>
     <script src="js/main.js"></script>
   </body>

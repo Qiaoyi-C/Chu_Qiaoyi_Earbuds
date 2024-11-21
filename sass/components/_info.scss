@@ -1,0 +1,68 @@
+/* Section 基本樣式 */
+.info{
+    background-color: #fff8f2;     /* 背景顏色 */
+    margin-bottom: 40px;
+}
+
+.features-section {
+    display: flex;
+    justify-content: space-between; /* 等間距排列 */
+    align-items: flex-start;       /* 對齊到頂部 */
+    gap: 20px;                     /* 卡片之間的間距 */
+    padding: 40px;                 /* 整體內間距 */
+    
+  }
+  
+  /* 卡片樣式 */
+  .feature-card {
+    background-color: #fff;        /* 卡片背景色 */
+    border-radius: 16px;           /* 圓角 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 陰影效果 */
+    padding: 20px;                 /* 卡片內間距 */
+    text-align: center;            /* 卡片文字居中 */
+    flex: 1;                       /* 卡片等寬 */
+  }
+  
+  /* 圖示區域樣式 */
+  .icon-wrapper {
+    display: flex;
+    justify-content: center;       /* 圖示水平置中 */
+    align-items: center;           /* 圖示垂直置中 */
+    width: 80px;                   /* 圖示容器大小 */
+    height: 80px;
+    margin: 0 auto 20px;           /* 自動置中 + 下方間距 */
+    border-radius: 50%;            /* 圓形容器 */
+    background-color: #fde8d7;     /* 圖示背景色 */
+  }
+  
+  /* 標題樣式 */
+  .feature-card h3 {
+    font-size: 18px;               /* 標題大小 */
+    font-weight: bold;             /* 加粗 */
+    color: #803901;                /* 主色調 */
+    margin: 16px 0;                /* 上下間距 */
+  }
+  
+  /* 文字內容樣式 */
+  .feature-card p {
+    font-size: 14px;               /* 文字大小 */
+    color: #333;                   /* 文字顏色 */
+    line-height: 1.6;              /* 行高 */
+    text-align: left;
+  }
+  
+  @media (max-width: 480px) {
+    .tech-specs {
+      grid-template-columns: 1fr; /* 單欄排列 */
+      gap: 20px;
+    }
+  
+    .image-box,
+    .text-box {
+      grid-column: span 12;
+    }
+  
+    .text-box {
+      height: auto; /* 移除固定比例，允許文字撐高 */
+    }
+  }
