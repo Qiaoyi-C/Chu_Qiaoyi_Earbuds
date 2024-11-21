@@ -17,75 +17,67 @@
 }
 
 .image-box{
-    opacity: 0; /* 初始透明度設為 0 */
-    transform: translateX(0); /* 初始位置 */
+    opacity: 0; 
+    transform: translateX(0); 
     transition: opacity 0.3s ease, transform 0.5s ease;
 }
   
-  /* 左側圖片 */
   .image-box img {
     display: block;
-    width: 100%; /* 確保圖片響應式 */
+    width: 100%; 
     height: auto;
-    border-radius: 24px; /* 可選：讓圖片有圓角 */
+    border-radius: 24px; 
   }
   
- /* 文字框樣式 */
 .text-box {
     display: flex;
     height: 100%;
     justify-content: center;
     align-items: center;
-    background-color: #fff7ef; /* 柔和的背景色 */
-    border-radius: 24px; /* 圓角框 */
-    aspect-ratio: 1; /* 保持正方形 */
-    opacity: 0; /* 初始透明度設為 0 */
-    transform: translateX(0); /* 初始位置 */
+    background-color: #fff7ef; 
+    border-radius: 24px; 
+    aspect-ratio: 1; 
+    opacity: 0; 
+    transform: translateX(0); 
     transition: opacity 0.3s ease, transform 0.5s ease;
   }
   
-  /* 文字內容 */
   .text-content {
     text-align: left;
-
   }
   
-  /* 時間區塊 */
   .time {
-    margin-bottom: 20px; /* 時間塊之間的間距 */
+    margin-bottom: 20px; 
   }
   
   .time:last-child {
     margin-bottom: 0;
   }
   
-  /* 時間數值 */
   .time-value {
-    font-size: 48px; /* 大字體 */
-    font-weight: 700; /* 粗體 */
-    color: #8c4413; /* 深棕色 */
+    font-size: 48px; 
+    font-weight: 700; 
+    color: #8c4413; 
   }
   
-  /* 單位 */
   .time-unit {
-    font-size: 16px; /* 較小字體 */
-    font-weight: 400; /* 普通字體 */
+    font-size: 16px; 
+    font-weight: 400; 
     color: #8c4413;
   }
   
-  /* 描述文字 */
   .time p {
-    font-size: 20px; /* 正文字體大小 */
+    font-size: 20px; 
     font-weight: 400;
-    color: #333; /* 深灰色 */
-    margin: 5px 0 0 0; /* 上方間距 */
-    line-height: 1.5; /* 行高 */
+    color: #333; 
+    margin: 5px 0 0 0; 
+    line-height: 1.5; 
   }
   
 
   @media (max-width: 768px) {
   .tech-specs {
-    grid-template-columns: 1fr; /* 單欄排列 */
+    grid-template-columns: 1fr; 
     gap: 20px;
   }
 
@@ -95,7 +87,7 @@
   }
 
   .text-box {
-    height: auto; /* 移除固定比例，允許文字撐高 */
+    height: auto; 
   }
 }
 
