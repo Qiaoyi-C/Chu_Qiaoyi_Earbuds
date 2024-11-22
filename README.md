@@ -1,1 +1,1 @@
-# Chu_Qiaoyi_Earbuds
+<img src="./images/ promotional 3.jpg" alt="Scrolling Animation Preview" width="600">
