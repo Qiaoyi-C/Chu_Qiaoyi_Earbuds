@@ -1,4 +1,4 @@
-<img src="./images/poster.jpeg" alt="Scrolling Animation Preview" width="600">
+<img src="./images/ promotional 3.jpg" alt="Scrolling Animation Preview" width="600">
 
 # Chu_Qiaoyi_Earbuds
 This is a repo for Joy's Earbuds.
