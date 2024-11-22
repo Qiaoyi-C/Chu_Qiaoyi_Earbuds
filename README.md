@@ -1,5 +1,9 @@
+<img src="./images/poster.jpeg" alt="Scrolling Animation Preview" width="600">
+
 # Chu_Qiaoyi_Earbuds
 This is a repo for Joy's Earbuds.
+An engaging web experience combining animations, interactions, and scroll effects. Explore the features of earbuds, including color selection, X-RAY view, and scrolling animations. ✨
+
 
 ## Installation
 There is no installation required
