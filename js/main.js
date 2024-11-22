@@ -67,18 +67,28 @@
     const colorMapping = {
       Ivory: "images/earbud_ivory.jpg",
       Black: "images/earbud_black.jpg",
+      Default: "images/earbud_default.jpg", 
     };
-
-    earbudImage.src = colorMapping[color];
+  
+    const selectedImage = colorMapping[color] || colorMapping["Default"];
+  
+    earbudImage.src = selectedImage;
     earbudImage.alt = `${color} Earbuds`;
   }
-
+  
   document.querySelectorAll(".color-btn").forEach(button => {
     button.addEventListener("click", () => {
+    
       document.querySelectorAll(".color-btn").forEach(btn => btn.classList.remove("selected"));
+  
+    
       button.classList.add("selected");
+  
+      const selectedColor = button.getAttribute("data-color");
+      changeEarbudColor(selectedColor);
     });
   });
+  
 
   // === X-RAY View Interaction ===
   (() => {
